@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include<malloc.h>
+
+int main()
+{
+   /*Making a 2d Array*/
+
+int numRows= 4;
+int numColumns = 4;
+int **array2d = (int**)malloc(numRows*sizeof(int*));
+for(int i = 0; i<numRows; i++){
+	array2d[i] = (int*)malloc(numColumns*sizeof(int));
+}
+
+/*String Array*/
+int numWords= 5;
+int wordBufferSize = 50;
+char **arrayOfStrings = (char**)malloc(numWords*sizeof(char*));
+for(int i = 0; i<numRows; i++){
+	arrayOfStrings[i] = (char*)malloc(wordBufferSize*sizeof(char));
+}
+
+int i = 0;
+arrayOfStrings[i] = "Apple"; 
+//{"Apple", "Orange", "Banana", "Grape", "Apricot"};
+free(arrayOfStrings);
+free(array2d);
+
+
+
+
+/*Free 2d Array Function*/
+
+void freeIntArray2d(int **ar, int numRows ){
+	if(ar){
+		for(int i = 0; i < numRows; i++){
+			free(ar[i]);
+		}
+	}
+	free(ar);
+}
+
+
+void freeStringArray(char **wordList, int numWords ){
+	if(wordList){
+		for(int i = 0; i < numWords; i++){
+			free(wordList[i]);
+		}
+	}
+	free(wordList);
+}
+    return 0;
+}
+
+
