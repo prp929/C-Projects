@@ -1,4 +1,4 @@
-# C-Projects
+C-Projects
 
 -> is equivalent to the dot (.) operator in OO languages  
 
@@ -48,9 +48,10 @@ However, if the pointers were void* and pointing to an object with mallocd field
 
 C_Unix:
 	To make header file, see example circle.h; this is functionally a class. Then see circle.c for method implementation
-	To compile, you must #inlcude "circle.h" in your circle.c; then, you must link them with gcc prg1.o prgOfMethods.o -lm
-	to get the file.o, simply use gcc myPrgm -m //this output is compile only; then simply link the compiled files and finally 
-		run a.out
+	To compile, you must #inlcude "circle.h" in your circle.c; then, you must link them with gcc prg1.o prgOfMethods.o 
+           -lm
+	to get the file.o, simply use gcc myPrgm -m //this output is compile only; then simply link the compiled files 
+	   and finally run a.out
 	CMakeLists.txt is where to add header file in clion
 	
 Arraylist in C:
